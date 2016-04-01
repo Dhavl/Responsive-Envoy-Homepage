@@ -1,0 +1,566 @@
+/****************************** MAIN STYLES - backgorund,deviders ******************************/
+
+/* Main Container */
+img, embed, object, video {
+	width: 100%
+}
+/* Deviders */
+hr.separator1 {
+	height: 3px;
+	margin: 10px 0 10px 0;
+	background-image: -webkit-linear-gradient(left, rgba(88, 88, 88, .3), rgba(88, 88, 88, .3), rgba(88, 88, 88, .3));
+	background-image: -moz-linear-gradient(left, rgba(88, 88, 88, .3), rgba(88, 88, 88, .3), rgba(88, 88, 88, .3));
+	background-image: -ms-linear-gradient(left, rgba(88, 88, 88, .3), rgba(88, 88, 88, .3), rgba(88, 88, 88, .3));
+	background-image: -o-linear-gradient(left, rgba(88, 88, 88, .3), rgba(88, 88, 88, .3), rgba(88, 88, 88, .3));
+	border: 0;
+}
+hr.separator2 {
+	height: 1px;
+	margin: 7px 0;
+	background-image: -webkit-linear-gradient(left, rgba(88, 88, 88, .3), rgba(88, 88, 88, .3), rgba(88, 88, 88, .3));
+	background-image: -moz-linear-gradient(left, rgba(88, 88, 88, .3), rgba(88, 88, 88, .3), rgba(88, 88, 88, .3));
+	background-image: -ms-linear-gradient(left, rgba(88, 88, 88, .3), rgba(88, 88, 88, .3), rgba(88, 88, 88, .3));
+	background-image: -o-linear-gradient(left, rgba(88, 88, 88, .3), rgba(88, 88, 88, .3), rgba(88, 88, 88, .3));
+	border: 0;
+}
+
+/****************************** HOME - Content Part - Logo&Menu ******************************/
+/* Header - Logo & Menu */
+
+#header {
+	background-color:#333333;
+	margin-top:0px;
+	
+}
+#header .container{
+	width: 950px;
+}
+.logo {
+	float: left;
+	padding-top:10px;
+}
+.mainmenu {
+	float:left;
+	margin-left: 10px;
+	
+}
+ul.sf-menu {
+	margin-top:0px;
+}
+/*** ESSENTIAL STYLES ***/
+.sf-menu, .sf-menu * {
+	margin:			0;
+	padding:		0;
+	list-style:		none;
+}
+.sf-menu {
+	line-height:	0.01;
+}
+.sf-menu ul {
+	position:		absolute;
+	top:			-999em;
+	width:			10em; /* left offset of submenus need to match (see below) */
+}
+.sf-menu ul li {
+	width:			100%;
+}
+.sf-menu li:hover {
+	/*visibility:		inherit; fixes IE7 'sticky bug' */
+	color: red;
+}
+.sf-menu li {
+	float:			left;
+	position:		relative;
+}
+.sf-menu a {
+	display:		block;
+	position:		relative;
+}
+.sf-menu li:hover ul, .sf-menu li.sfHover ul {
+	left:			0;
+	top:			2.5em; /* match top ul list item height */
+	z-index:		99;
+}
+ul.sf-menu li:hover li ul, ul.sf-menu li.sfHover li ul {
+	top:			-999em;
+}
+ul.sf-menu li li:hover ul, ul.sf-menu li li.sfHover ul {
+	left:			10em; /* match ul width */
+	top:			0;
+}	
+ul.sf-menu li li:hover li ul, ul.sf-menu li li.sfHover li ul {
+	top:			-999em;
+}
+ul.sf-menu li li li:hover ul, ul.sf-menu li li li.sfHover ul {
+	left:			10em; /* match ul width */
+	top:			0;
+}
+.sf-menu li a {
+	font-family:'Oswald', serif;
+	font-size:12px;
+	padding:40px 15px 20px 15px;
+	text-decoration:none;
+	color: white;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+.sf-menu li a:hover { /* visited pseudo selector so IE6 applies text colour*/
+	color:red;
+}
+li a#visited {
+	color:red;
+}
+/*** submenu ***/
+.sf-menu li ul {
+	background:#261b0d url(../images/DS.jpg) repeat;
+	border-top:3px solid #e8ded1;
+	margin-top:75px;
+}
+
+.sf-menu li ul li a:hover {
+	padding-left: 18px;
+}
+/* apply hovers to modern browsers */
+a:focus > .sf-sub-indicator, a:hover > .sf-sub-indicator, a:active > .sf-sub-indicator, li:hover > a > .sf-sub-indicator, li.sfHover > a > .sf-sub-indicator {
+	background-position: -10px -100px; /* arrow hovers for modern browsers*/
+}
+/* point right for anchors in subs */
+.sf-menu ul .sf-sub-indicator {
+	background-position:-10px 0;
+}
+.sf-menu ul a > .sf-sub-indicator {
+	background-position:  0 0;
+}
+/* apply hovers to modern browsers */
+.sf-menu ul a:focus > .sf-sub-indicator, .sf-menu ul a:hover > .sf-sub-indicator, .sf-menu ul a:active > .sf-sub-indicator, .sf-menu ul li:hover > a > .sf-sub-indicator, .sf-menu ul li.sfHover > a > .sf-sub-indicator {
+	background-position: -10px 0; /* arrow hovers for modern browsers*/
+}
+.sf-menu li img{
+	align:right;
+	padding-top:35px; 
+	padding-left: 25px;
+	width:83%;
+}
+/****************************** FlexSlider ******************************/
+.slider h1 {
+	color:#fff;
+}
+/*
+ * jQuery FlexSlider v1.8
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+
+/* Browser Resets */
+.flex-container a, .flexslider a, .flex-container a:active, .flexslider a:active, .flex-container a:focus, .flexslider a:focus {
+	outline: none;
+}
+.slides, .flex-control-nav, .flex-direction-nav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+/* FlexSlider Necessary Styles
+*********************************/
+.flexslider {
+	padding: 0 0 0 0;
+	background:white;
+	/*border-top:1px solid #e8ded1;*/
+}
+.flexslider .slides > li {
+	display: none;
+	-webkit-backface-visibility: hidden;
+} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img {
+	display: block;
+}
+.flex-pauseplay span {
+	text-transform: capitalize;
+}
+/* Clearfix for the .slides element */
+.slides:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+html[xmlns] .slides {
+	display: block;
+}
+* html .slides {
+	height: 1%;
+}
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {
+	display: block;
+}
+/* FlexSlider Default Theme
+*********************************/
+.flexslider {
+	position: relative;
+	zoom: 1;
+}
+.flexslider .slides {
+	zoom: 1;
+}
+.flexslider .slides > li {
+	position: relative;
+}
+/* Suggested container for "Slide" animation setups. Can replace this with your own, if you wish */
+.flex-container {
+	zoom: 1;
+	position: relative;
+}
+/* Caption style */
+/* IE rgba() hack */
+.caption {
+	zoom: 1;
+	width: 27%;
+	padding: 2%;
+	margin: 0;
+	position: absolute;
+	left: 24%;
+	bottom: 25%;
+	text-align:left;
+	
+	
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+.caption h2 {
+	color:#D90E0C;
+	text-shadow: 1px 1px 0 #fff;
+	font-size: 40px;
+	margin-bottom: 20px;
+	line-height:45px;
+}
+.caption p {
+	color:#C5C5C5;
+	font-size:16px;
+	margin-top:5px;
+	text-shadow:none;
+
+}
+.caption a.button {
+	background:#f07272 url(../images/rausch.png) repeat;
+	border:1px solid #da6767;
+	padding:10px;
+	color:#ead6bd;
+	font-size:14px;
+	line-height:40px;
+	font-weight:bold;
+	text-transform: uppercase;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+/* Direction Nav */
+.flex-direction-nav {
+	height: 0;
+}
+.flex-direction-nav a{
+	width:52px;
+	height: 52px;
+	margin: -15px 0 0;
+	display: block;
+	background:  url(../images/flexslider/bg_direction_nav.png) no-repeat;
+	position: absolute;
+	top: 92%;
+	cursor: pointer;
+	text-indent: -999em;
+	opacity: 0.2;
+
+}
+.flex-direction-nav a:hover
+{
+	background-color: red;
+
+}
+.flex-direction-nav .flex-next {
+	background-position: -52px 0;
+	right: 19%;
+}
+.flex-direction-nav .flex-prev {
+	left: 73%;
+	background-position: -1px 0;
+}
+.flex-direction-nav .flex-disabled {
+	opacity: .3;
+	filter:alpha(opacity=30);
+	cursor: default;
+}
+/* Control Nav */
+.flex-control-nav {
+	width: 100%;
+	position: absolute;
+	bottom: -30px;
+	text-align: center;
+}
+.flex-control-nav li {
+	margin: 0 0 0 5px;
+	display: inline-block;
+	zoom: 1;
+*display: inline;
+}
+.flex-control-nav li:first-child {
+	margin: 0;
+}
+.flex-control-nav a {
+	width: 13px;
+	height: 13px;
+	display: block;
+	cursor: pointer;
+	text-indent: -999em;
+}
+.flex-control-nav a:hover {
+	background-position: 0 -13px;
+}
+.flex-control-nav a.flex-active {
+	background-position: 0 -26px;
+	cursor: default;
+}
+
+/****************************** Infobox & Heading & Socialize Boxes ******************************/
+.infobox {
+	background-color:#333333;
+	
+}
+.info {
+	text-align:left;
+	padding:20px, 0px, 20px, 0px;
+}
+.infobox p{
+	color: white;
+	font-size: 24px;
+	font-family: 'Oswald', serif;
+}
+.infobox a{
+	color:#E34D34;
+}
+
+.headingblock {
+	margin-bottom:40px;
+	background:url(../images/bg/lightpaperfibers.png) repeat;
+}
+.heading {
+	text-align:left;
+	padding:30px 0 0 0;
+}
+
+/****************************** Latest Photos ******************************/
+.latest figure {
+	margin-bottom:30px;
+	background-color: #333333;
+}
+.latest figure .thumb {
+	display: block;
+}
+
+.latest figure {
+	color:#7C7C7C;
+	
+}
+.latest figure figcaption {
+	
+	text-align: left;
+	padding:0 0 2px 0;
+}
+.latest figure figcaption .heading {
+	
+	font-size: 18px;
+	color: F6F6F6;
+	font-family: 'Oswald', serif;
+	display: block;
+}
+.latest1 .heading #nwH{
+	margin: 0 0 0 0;
+}
+
+/****************************** Shortcodes ******************************/
+/* Content Shortcodes */
+
+.one_third {
+	width: 30.66%;
+
+}
+
+ .one_third {
+	margin-right: 2.5%;
+	margin-bottom: 7px;
+	float: left;
+
+}
+p.bioquote1{
+	color: white;
+	font-size: 20px;
+	font-family: 'Oswald', serif;
+	margin:0 0 0 0;
+}
+p.bioquote{
+	margin: 0 0 0 0;
+}
+.lastcolumn {
+	margin-right: 0!important;
+	clear: right;
+}
+/* #Page Styles
+================================================== */
+.content {
+	padding-top: 20px;
+}
+.content.right {
+	float: right;
+}
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 1300px) {
+.caption {
+  width:30%;
+}
+}
+@media only screen and (max-width: 1100px) {
+.caption {
+  display:none;
+}
+}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {
+.caption {
+	display:none;
+}
+}
+
+	/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+.mainmenu select {
+ position:absolute;
+ top:0;
+ right:0;
+ margin-top:40px;
+}
+.mainmenu {
+ height:10px;
+}
+.one_half, .one_third, .two_third, .one_fourth, .one_fifth, .one_sixth {
+width: 100%;
+}
+.caption {
+ display:none;
+}
+.info h1 {
+ line-height:40px;
+ font-size:36px;
+}
+form#contact_form textarea {
+ width: 300px;
+}
+}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+.mainmenu select {
+ position:absolute;
+ top:0;
+ right:0;
+ margin-top:40px;
+}
+.mainmenu {
+ height:10px;
+}
+ ul.tabs {
+ margin-top:20px;
+}
+.caption {
+ display:none;
+}
+.info h1 {
+ line-height:40px;
+ font-size:36px;
+}
+form#contact_form textarea {
+ width: 300px;
+}
+}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {
+.mainmenu select {
+ position:absolute;
+ top:0;
+ right:0;
+ margin-top:40px;
+ width:40%;
+}
+.mainmenu {
+ height:10px;
+}
+.caption {
+ display:none;
+}
+ul.tabs {
+ margin-top:20px;
+}
+ul.tabs li {
+ padding: 0 5px 0 0px;
+}
+ .mainmenu {
+float: left;
+width: 100%;
+margin-top:-200px;
+}
+.info h1 {
+ line-height:40px;
+ font-size:36px;
+}
+form#contact_form textarea {
+ width: 200px;
+}
+form#contact_form input[type="text"] {
+ width: 150px;
+}
+form#contact_form input#email {
+ width: 150px;
+}
+}
+/* Responsive Menu
+================================================== */
+	
+#mainmenu {
+	visibility: visible;
+}
+#responsive-menu {
+	display: none;
+	float: left;
+}
+ @media only screen and (max-width: 767px) {
+ #mainmenu {
+visibility: hidden;
+height: 0;
+}
+ #responsive-menu {
+display: inline-block;
+width: 100%;
+margin-top: 13px;
+}
+}
